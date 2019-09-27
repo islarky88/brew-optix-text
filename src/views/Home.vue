@@ -3,7 +3,7 @@
     <h1>Brands List</h1>
     <v-container>
       <v-row>
-        <v-col v-for="(item, i) in $store.state.storeItems"
+        <v-col v-for="(item, i) in beerBrands"
           :key="i"
           cols="12"
           sm="6"
@@ -11,13 +11,16 @@
         >
           <v-card>
             <v-card-title primary-title>
-              Brand
+              {{ item.name }}
             </v-card-title>
             <v-card-text>
               this is a text
             </v-card-text>
             <v-card-actions>
-              See Details
+              <v-spacer></v-spacer>
+              <v-btn text :to="'/about' + item.supplier_id">
+                See Details <v-icon>mdi-arrow-right-bold-hexagon-outline</v-icon>
+              </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
