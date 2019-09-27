@@ -1,7 +1,7 @@
 # brew-optix-test
 
 
-## Step 1 - Installation
+## Step 1 - Installation 
 ```
 git clone https://github.com/islarky88/brew-optix-text.git
 cd brew-optix-text
