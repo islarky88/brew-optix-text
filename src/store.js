@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     appName: 'Brew Optix',
-    menuItems: [{ title: 'Brand', link: '/' }, { title: 'Product', link: '/' }],
+    menuItems: [{ title: 'Brand', link: '/' }, { title: 'Product', link: '/' }, { title: 'About', link: '/about' }],
     beerBrands: [],
   },
   mutations: {
