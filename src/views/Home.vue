@@ -24,12 +24,12 @@
       </v-row>
     </v-container>
 
-    {{ brands }}
+    {{ beerBrands }}
   </v-container>
 </template>
 
 <script>
-  import axios from 'axios';
+  // import axios from 'axios';
   export default {
     components: {
 
@@ -39,28 +39,33 @@
         brands: [],
       };
     },
+    computed: {
+      beerBrands() {
+        return this.$store.state.beerBrands;
+      },
+    },
     mounted() {
       // console.log(process.env.BASE_API_URL);
-      this.fetchBrands();
+      this.$store.dispatch('fetchBeerBrands');
     },
     methods: {
-      async fetchBrands() {
+      // async fetchBrands() {
 
-        let url = 'http://private-anon-e2d1d383a9-brewoptixv2.apiary-mock.com/brands';
+      //   let url = 'http://private-anon-e2d1d383a9-brewoptixv2.apiary-mock.com/brands';
 
-        try {
-          let { data } = await axios.get(url);
+      //   try {
+      //     let { data } = await axios.get(url);
 
-          if (data.length === 0) {
-            throw new Error('Post not found.');
-          }
+      //     if (data.length === 0) {
+      //       throw new Error('Post not found.');
+      //     }
 
-          this.brands = data;
-        } catch (e) {
-          // eslint-disable-next-line no-console
-          console.log(e);
-        }
-      },
+      //     this.brands = data;
+      //   } catch (e) {
+      //     // eslint-disable-next-line no-console
+      //     console.log(e);
+      //   }
+      // },
     },
   };
 </script>
