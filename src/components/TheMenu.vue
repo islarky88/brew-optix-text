@@ -4,7 +4,7 @@
       <v-toolbar-title class="headline text-uppercase mr-5">
         <span>{{ $store.state.appName }}</span>
       </v-toolbar-title>
-      <v-btn v-for="(item, i) in $store.state.menuItems" :key="i" :to="item.link" text>
+      <v-btn class="ml-5" v-for="(item, i) in $store.state.menuItems" :key="i" :to="item.link" text>
         {{ item.title }}
       </v-btn>
       <v-spacer></v-spacer>
