@@ -2,6 +2,9 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
 
+const getAllBrandUrl = "https://private-anon-2615f06602-brewoptixv2.apiary-mock.com/brands";
+const getBrandByIdUrl = "https://private-anon-2615f06602-brewoptixv2.apiary-mock.com/brands/";
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -41,11 +44,9 @@ export default new Vuex.Store({
   },
   actions: {
     async fetchBeerBrands({ commit }) {
-      let url =
-        'https://private-anon-2615f06602-brewoptixv2.apiary-mock.com/brands';
 
       try {
-        let { data } = await axios.get(url);
+        let { data } = await axios.get(getAllBrandUrl);
 
         if (data.length === 0) {
           throw new Error('No brands fetched');
@@ -64,11 +65,8 @@ export default new Vuex.Store({
         },
       };
 
-      let url =
-        'https://private-anon-2615f06602-brewoptixv2.apiary-mock.com/brands/';
-
       try {
-        let { data } = await axios.get(url, config);
+        let { data } = await axios.get(getBrandByIdUrl, config);
 
         if (data.length === 0) {
           throw new Error('Unable to fetch Brand Data');
@@ -80,18 +78,6 @@ export default new Vuex.Store({
         console.log(e);
       }
 
-      try {
-        let { data } = await axios.get(url);
-
-        if (data.length === 0) {
-          throw new Error('No brands fetched');
-        }
-
-        commit('SET_BEER_BRANDS', data);
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.log(e);
-      }
     },
   },
 });

@@ -1,14 +1,23 @@
 # brew-optix-text
 
-## API URL INFO
+## API URL Notes
 ```
-API URLS are in ./src/store.js files
+Please change API URL located at ./src/store.js for testing. Line 5 and 6.
+
+getAllBrandUrl
+getBrandByIdUrl
 ```
 
-## Project setup
+
+## INSTALLATION INSTRUCTIONS
 ```
+git clone https://github.com/islarky88/brew-optix-text.git
+cd brew-optix-text
 npm install
+npm run serve
 ```
+
+
 
 ### Compiles and hot-reloads for development
 ```
