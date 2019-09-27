@@ -15,7 +15,7 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/user/:suplierId',
+      path: '/brand/:supplier_id',
       name: 'brand-info',
       component: BrandInfo,
     },

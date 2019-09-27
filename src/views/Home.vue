@@ -18,7 +18,7 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn text :to="'/about' + item.supplier_id">
+              <v-btn text :to="'/brand/' + item.supplier_id">
                 See Details <v-icon>mdi-arrow-right-bold-hexagon-outline</v-icon>
               </v-btn>
             </v-card-actions>

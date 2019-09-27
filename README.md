@@ -1,5 +1,10 @@
 # brew-optix-text
 
+## API URL INFO
+```
+API URLS are in ./src/store.js files
+```
+
 ## Project setup
 ```
 npm install
