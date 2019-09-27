@@ -42,7 +42,7 @@ export default new Vuex.Store({
   actions: {
     async fetchBeerBrands({ commit }) {
       let url =
-        'http://private-anon-e2d1d383a9-brewoptixv2.apiary-mock.com/brands';
+        'https://private-anon-2615f06602-brewoptixv2.apiary-mock.com/brands';
 
       try {
         let { data } = await axios.get(url);
@@ -65,7 +65,7 @@ export default new Vuex.Store({
       };
 
       let url =
-        'https://private-anon-e2d1d383a9-brewoptixv2.apiary-mock.com/brands/';
+        'https://private-anon-2615f06602-brewoptixv2.apiary-mock.com/brands/';
 
       try {
         let { data } = await axios.get(url, config);

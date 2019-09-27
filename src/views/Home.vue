@@ -27,7 +27,7 @@
       </v-row>
     </v-container>
 
-    {{ beerBrands }}
+    <!-- {{ beerBrands }} -->
   </v-container>
 </template>
 
