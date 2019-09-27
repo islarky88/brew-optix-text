@@ -1,10 +1,18 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {}
+  state: {
+    appName: 'Brew Optix',
+    menuItems: [{ title: 'Brand', link: '/' }, { title: 'Product', link: '/' }],
+    beerBrands: [],
+  },
+  mutations: {
+    setBeerBrands(state, data) {
+      state.beerBrands = data;
+    },
+  },
+  actions: {},
 });
