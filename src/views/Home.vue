@@ -22,8 +22,9 @@
       </v-container>
     </v-parallax>
 
-    <h1>Brands List</h1>
+
     <v-container>
+      <h1>Brands List</h1>
       <v-row>
         <v-col v-for="(item, i) in beerBrands"
           :key="i"

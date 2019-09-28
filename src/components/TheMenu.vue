@@ -85,6 +85,7 @@
 
 .menu-item {
   cursor: pointer;
+  margin: 0 15px;
   font-size: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -99,6 +100,7 @@
 
 .menu-try-button {
   cursor: pointer;
+  font-family: 'PT Sans';
 position: relative;
 text-align: center;
 font-style: normal;
