@@ -11,7 +11,7 @@
           ></v-img>
         </div>
         <v-spacer></v-spacer>
-        <div class="hidden-sm-and-down d-flex menu-items">
+        <div class="d-none d-md-flex menu-items">
           <div v-for="(item, i) in $store.state.menuItems"
             :key="i"
             class="ml-5 d-flex align-center menu-item"
@@ -20,7 +20,7 @@
           </div>
         </div>
 
-        <div class="ml-3 menu-try-button">
+        <div class="d-none d-md-flex ml-3 menu-try-button">
           TRY BREWOPTIX
         </div>
 

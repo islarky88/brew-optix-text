@@ -25,9 +25,19 @@
     <v-container>
       <h1>Brands List</h1>
       <div class="d-flex">
-        <BeerBrandTile brand="Carlsberg" image="carlsberg"></BeerBrandTile>
-        <BeerBrandTile brand="Heineken" image="heineken"></BeerBrandTile>
-        <BeerBrandTile brand="Sapporo" image="sapporo"></BeerBrandTile>
+        <v-row>
+          <v-col cols="12" sm="6" md="4">
+            <BeerBrandTile brand="Carlsberg" image="carlsberg"></BeerBrandTile>
+          </v-col>
+
+          <v-col cols="12" sm="6" md="4">
+            <BeerBrandTile brand="Heineken" image="heineken"></BeerBrandTile>
+          </v-col>
+
+          <v-col cols="12" sm="6" md="4">
+            <BeerBrandTile brand="Sapporo" image="sapporo"></BeerBrandTile>
+          </v-col>
+        </v-row>
       </div>
     </v-container>
 
