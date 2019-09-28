@@ -1,5 +1,7 @@
 <template>
-  <v-container>
+  <v-container fluid class="px-0">
+    <v-parallax src="/img/front-parallax.jpeg"></v-parallax>
+
     <h1>Brands List</h1>
     <v-container>
       <v-row>
