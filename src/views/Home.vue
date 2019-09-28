@@ -22,32 +22,13 @@
       </v-container>
     </v-parallax>
 
-
     <v-container>
       <h1>Brands List</h1>
-      <v-row>
-        <v-col v-for="(item, i) in beerBrands"
-          :key="i"
-          cols="12"
-          sm="6"
-          lg="3"
-        >
-          <v-card>
-            <v-card-title primary-title>
-              {{ item.name }}
-            </v-card-title>
-            <v-card-text>
-              this is a text
-            </v-card-text>
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn text :to="'/brand/' + item.supplier_id">
-                See Details <v-icon>mdi-arrow-right-bold-hexagon-outline</v-icon>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-      </v-row>
+      <div class="d-flex">
+        <BeerBrandTile brand="Carlsberg" image="carlsberg"></BeerBrandTile>
+        <BeerBrandTile brand="Heineken" image="heineken"></BeerBrandTile>
+        <BeerBrandTile brand="Sapporo" image="sapporo"></BeerBrandTile>
+      </div>
     </v-container>
 
     <!-- {{ beerBrands }} -->
@@ -55,10 +36,10 @@
 </template>
 
 <script>
-  // import axios from 'axios';
+  import BeerBrandTile from '../components/BeerBrandTile';
   export default {
     components: {
-
+      BeerBrandTile,
     },
     data() {
       return {
