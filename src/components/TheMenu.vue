@@ -1,23 +1,26 @@
 <template>
   <v-container>
-    <v-app-bar app :class="{ 'menu-elevate': elevateMenu, 'menu-flat': !elevateMenu}">
+    <v-app-bar class="" app :class="{ 'menu-elevate': elevateMenu, 'menu-flat': !elevateMenu}">
       <div class="d-flex align-center" style="margin: 0 auto; width: 1280px;">
         <div class="">
-          <v-img position="left" src="/img/logo-light.png" contain height="30"></v-img>
+          <v-img position="left"
+            src="/img/logo-light.png"
+            contain
+            width="200"
+            height="30"
+          ></v-img>
         </div>
         <v-spacer></v-spacer>
-        <div class="hidden-sm-and-down">
-          <v-btn v-for="(item, i) in $store.state.menuItems"
+        <div class="hidden-sm-and-down d-flex menu-items">
+          <div v-for="(item, i) in $store.state.menuItems"
             :key="i"
-            class="ml-5"
-            :to="item.link"
-            text
+            class="ml-5 d-flex align-center menu-item"
           >
-            {{ item.title }}
-          </v-btn>
+            {{ item.title }} <v-icon>mdi-chevron-down</v-icon>
+          </div>
         </div>
 
-        <div style="border: 1px solid">
+        <div class="ml-3 menu-try-button">
           TRY BREWOPTIX
         </div>
 
@@ -80,4 +83,45 @@
   background-color: unset !important;
 }
 
+.menu-item {
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'PT Sans';
+  transition: opacity .2s ease;
+}
+
+.menu-item:hover {
+  opacity: 0.7;
+}
+
+.menu-try-button {
+  cursor: pointer;
+position: relative;
+text-align: center;
+font-style: normal;
+text-decoration: none !important;
+outline: 0;
+vertical-align: middle;
+display: block;
+font-size: 12px;
+text-transform: uppercase;
+line-height: 1;
+letter-spacing: .12em;
+border-style: solid;
+border-width: 1px;
+padding: 1em 1.4em;
+margin: 0 10px;
+
+transition: all .4s cubic-bezier(0.694,.0482,.335,1);
+border-color: #e6b75d;
+background-color: #e6b75d;
+}
+
+.menu-try-button:hover {
+      color: #000;
+background-color: white;
+}
 </style>

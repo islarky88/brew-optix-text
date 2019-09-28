@@ -11,9 +11,11 @@ export default new Vuex.Store({
   state: {
     appName: 'Brew Optix',
     menuItems: [
-      { title: 'Brand', link: '/' },
-      // { title: 'Product', link: '/' },
-      { title: 'About', link: '/about' },
+      { title: 'Why BrewOptix', link: '/' },
+      { title: 'Solutions', link: '/' },
+      { title: 'Resources', link: '/' },
+      { title: 'Pricing', link: '/' },
+
     ],
     beerBrands: [],
     currentBeerData: { // mock data

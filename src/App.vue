@@ -52,4 +52,8 @@
   padding: 0;
 }
 
+.v-parallax__image {
+  opacity: 0.3 !important;
+}
+
 </style>

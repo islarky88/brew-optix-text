@@ -1,6 +1,26 @@
 <template>
   <v-container fluid class="px-0">
-    <v-parallax src="/img/front-parallax.jpeg"></v-parallax>
+    <v-parallax src="/img/front-parallax.jpeg">
+      <v-container class="align-center justify-center">
+        <div class="d-flex justify-center flex-column">
+          <div class="text-center"
+            style="font-size: 36px;
+          font-famly: 'Montserrat';
+          text-transform: uppercase;
+          font-weight: 900;"
+          >
+            Online Ordering
+          </div>
+          <div class="text-center mt-5"
+            style="font-family: Playfair Display;
+            font-style: italic;
+            font-size: 18px;"
+          >
+            Apply to be part of our pilot program for craft brewers.
+          </div>
+        </div>
+      </v-container>
+    </v-parallax>
 
     <h1>Brands List</h1>
     <v-container>
